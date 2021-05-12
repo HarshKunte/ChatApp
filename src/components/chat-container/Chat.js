@@ -52,7 +52,7 @@ function Chat({classes, handleDrawerToggle}) {
   const [roomDP, setRoomDP]= useState(null)
 
   const isMobile = useMediaQuery({
-    query: '(max-device-width: 425px)'
+    query: '(max-device-width: 768px)'
   })
 
   const history = useHistory()
@@ -167,11 +167,12 @@ function Chat({classes, handleDrawerToggle}) {
     const checkKey =(e)=>{
       
         const key = (e.which || e.keyCode);
-        if(!isMobile && key === 13 && !e.shiftKey){
+        if(key === 13 && !e.shiftKey){
           e.preventDefault()
-        
+          if(!isMobile){
           sendMessage()
           setInput("")
+          }
           
         }
     }
@@ -587,8 +588,7 @@ function Chat({classes, handleDrawerToggle}) {
               </IconButton>
               </label>
               </form>
-                {/* <form  onKeyDown={checkKey} onSubmit={sendMessage}> */}
-                {/* <form  onKeyDown={checkKey} onSubmit={(e)=>e.preventDefault()}> */}
+               
                     <textarea style={{height: `${autoResize()}px`}} rows='1' className='autoresize' role="textbox" value={input} onKeyDown={checkKey}  onChange={handleInputChange} type="text" placeholder="Type a message (Shift Enter to add new line.) "/>
                 <IconButton onClick={sendMessage}>
 
