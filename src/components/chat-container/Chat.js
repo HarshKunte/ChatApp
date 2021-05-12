@@ -30,7 +30,7 @@ import styles from './styles';
 import moment from 'moment'
 import InviteLinkModal from '../invite-link-modal/InviteLinkModal';
 import useStorage from '../../helper/useStorage';
-
+import { useMediaQuery } from 'react-responsive'
 
 function Chat({classes, handleDrawerToggle}) {
   const [seed, setSeed] = useState("");
@@ -50,6 +50,10 @@ function Chat({classes, handleDrawerToggle}) {
   const [iconsId, setIconsId] = useState(null)
   const [image, setImage]= useState(null)
   const [roomDP, setRoomDP]= useState(null)
+
+  const isMobile = useMediaQuery({
+    query: '(max-device-width: 425px)'
+  })
 
   const history = useHistory()
   const inputRef = useRef()
@@ -163,7 +167,7 @@ function Chat({classes, handleDrawerToggle}) {
     const checkKey =(e)=>{
       
         const key = (e.which || e.keyCode);
-        if(key === 13 && !e.shiftKey){
+        if(!isMobile && key === 13 && !e.shiftKey){
           e.preventDefault()
         
           sendMessage()
