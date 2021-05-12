@@ -491,9 +491,9 @@ function Chat({classes, handleDrawerToggle}) {
                    <ul>
 
                     <li>You can invite people into this room by sharing invite link which is in menu at chatroom header.</li>
-                    <li>You can click on message to reply or delete message.</li>
-                    <li>You can upload images.</li>
-                    <li>You can scroll to the replied message by clicking on it.</li>
+                    <li>Click on message to reply or delete message.</li>
+                    <li>Click on room name section to update room name and room DP</li>
+                    <li>Scroll to the replied message by clicking on it.</li>
                    </ul>
                   </div>
                 {
