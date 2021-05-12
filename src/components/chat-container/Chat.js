@@ -168,8 +168,8 @@ function Chat({classes, handleDrawerToggle}) {
       
         const key = (e.which || e.keyCode);
         if(key === 13 && !e.shiftKey){
-          e.preventDefault()
           if(!isMobile){
+          e.preventDefault()
           sendMessage()
           setInput("")
           }
