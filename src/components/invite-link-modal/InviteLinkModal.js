@@ -9,8 +9,8 @@ import FileCopyIcon from '@material-ui/icons/FileCopy';
 
 
 function InviteLinkModal({classes,openModal, setOpenModal, id}) {
- 
-  const url = `http://localhost:3000/join/${id}`
+ const URL = process.env.REACT_APP_URL
+  const url = `${URL}/${id}`
     const [message, setMessage] = useState(null)
 //   const handleOpen = () => {
 //     setOpen(true);
