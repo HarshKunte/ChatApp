@@ -90,6 +90,7 @@ const styles =theme =>({
         cursor:'pointer',
         display:'flex',
         whiteSpace:'pre-line',
+        
         [theme.breakpoints.down('xs')]: {
             padding: '0.8rem',
           },

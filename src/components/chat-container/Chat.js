@@ -522,7 +522,7 @@ function Chat({classes, handleDrawerToggle}) {
                         ) :
                         (
                           <>
-                       <p> {message.message} </p>
+                       <p style={{wordBreak:'break-all'}}> {message.message} </p>
                         <p className={classes.chatTimestamp}>{
                           moment(new Date(message.timestamp?.toDate())).format('MMMM Do YY, h:mm a')}</p>
                           </>
