@@ -15,7 +15,6 @@
 ## Screenshots
 ![Home](https://github.com/HarshKunte/ChatApp/blob/master/readme%20images/image1.png)
 ![Home](https://github.com/HarshKunte/ChatApp/blob/master/readme%20images/image2.png)
-![Mobile view](https://github.com/HarshKunte/ChatApp/blob/master/readme%20images/mobile1.jpeg)
 ![Mobile View](https://github.com/HarshKunte/ChatApp/blob/master/readme%20images/mobile2.jpeg)
 
 ## Steps to install
